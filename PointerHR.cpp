@@ -1,15 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+void update(int*a ,int*b)
+{
+    int A = *a;
+    *a = *a + *b;
+    *b = abs(A - *b);
+}
 
 int main()
 {
-    int a, b ,c ,d;
-    
-    scanf("%d %d", &a, &b);
-       
-    c = a + b;
-    d = abs(a - b);
-    
-    printf("%d\n%d", c, d);
+    int a ,b;
+    int *pa = &a ,*pb = &b;
+
+    scanf("%d %d" ,&a ,&b);
+    update(pa ,pb);
+    printf("%d\n%d" ,a ,b);
 
     return 0;
 }
