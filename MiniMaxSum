@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int value, i;
+    long long int sum = 0;
+    vector<int>arr;
+    
+    for(i = 0; i < 5; i++)
+    {
+        cin >> value;
+        sum += value;
+        arr.push_back(value);
+    }
+    sort(arr.begin(), arr.end());
+    
+    cout << sum - arr[4] << " " << sum - arr[0];
+}
