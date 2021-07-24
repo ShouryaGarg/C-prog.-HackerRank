@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n, element, arr[101] = {0}, ans = 0;
+    
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        cin >> element;
+        arr[element]++;
+        
+        ans += arr[element]/2;
+        arr[element] = arr[element]%2;
+    }
+    cout << ans;
+}
