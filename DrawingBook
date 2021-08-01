@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n, p, front, back;
+    cin>>n;
+    cin>>p;
+    
+    front = p/2;
+    
+    if(n%2==0){
+        back=(n-p+1)/2;
+    }
+    else{
+        back=(n-p)/2;
+    }
+    cout<<min(front,back);
+}
