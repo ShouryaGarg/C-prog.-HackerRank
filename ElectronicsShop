@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int b, n, m, result=-1;
+    int keyboard[1000], drive[1000];
+    cin>>b>>n>>m;
+    for(int i = 0;i<n;i++){
+        cin>>keyboard[i];
+    }
+    for(int i = 0;i<m;i++){
+        cin>>drive[i];
+    }
+    for(int i = 0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if(keyboard[i]+drive[j] <= b){
+                result = max(result, keyboard[i]+drive[j]);
+            }
+        }
+    }
+    cout<<result;
+}
