@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+long long int reverse(long long int n){
+    long long int remainder = 0;
+    while(n != 0){
+        remainder = remainder * 10 + n % 10;
+        n = n / 10;
+    }
+    return remainder;
+}
+
+int main(){
+    int count = 0;
+    long long int i, j, k;
+    cin>>i>>j>>k;
+    
+    for(long long int a = i; a <= j; a++){
+        if(abs(a - reverse(a)) % k == 0){
+            count ++;
+        }
+    }
+    cout<<count<<endl;
+}
