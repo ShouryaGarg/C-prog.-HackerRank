@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n, shared = 5, liked, cumulative = 0;
+    cin >> n;
+    
+    for(int i = 1; i <= n; i++){
+        liked = (shared/2);
+        shared = liked * 3;
+        cumulative += liked;
+    }
+    cout << cumulative;
+    
+}
